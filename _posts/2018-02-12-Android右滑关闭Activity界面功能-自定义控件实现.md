@@ -3,11 +3,13 @@
  title: Android右滑关闭Activity界面功能-自定义控件实现
 ---
 # 引言 #
-Android右滑关闭Activity界面功能，网上已经有好多优秀的开源代码和项目，不过大部分都是结合ViewDragHelper来实现的，这里要讨论的是通过结合ValueAnimator来实现，当前目前我的控件只实现了从左往右（上往下）滑关闭界面。
+Android右滑关闭Activity界面功能，网上已经有好多优秀的开源代码和项目，不过大部分都是结合ViewDragHelper来实现的，这里要讨论的是通过结合ValueAnimator来实现，目前我的控件只实现了从左往右（上往下）滑关闭界面。
 # 需求 #
 - 在界面上从左往右滑，View位置根据手势移动。
 - 只拦截左右滑动，上下方向的滑动无影响。
 - 子View的左右滑动事件无影响。
+# 预览图 #
+![](https://i.imgur.com/s08E8h0.png)
 # 实现思路 #
 - SwipeBackLayout：左右滑动View
 - onInterceptTouchEvent：该方法只要做左右移动拦截，上下移动不拦截。
